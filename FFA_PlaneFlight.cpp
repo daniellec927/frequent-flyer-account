@@ -1,9 +1,6 @@
 /*
- Com Sci 31 Project 5
  PlaneFlight.cpp
  Author: Danielle Choi
- UID: XXXXXXXXX
- Discussion Section: 1C
  Date: 2023/03/05.
  */
 
