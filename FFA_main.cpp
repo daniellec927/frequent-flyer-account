@@ -16,19 +16,19 @@ using namespace std;
 
 int main() {
     // sample test code
-    PlaneFlight shortleg( "Howard", "LAX", "LAS", 49.00, 285 );
-    PlaneFlight longleg( "Howard", "LAS", "NYC", 399.00, 2800 );
+    PlaneFlight shortleg( "Alex", "LAX", "LAS", 49.00, 285 );
+    PlaneFlight longleg( "Alex", "LAS", "NYC", 399.00, 2800 );
     PlaneFlight sample( "Sample", "Sample", "Sample", 0, 1 );
-    FrequentFlyerAccount account( "Howard" );
+    FrequentFlyerAccount account( "Alex" );
     assert( shortleg.getFromCity( ) == "LAX" );
     assert( shortleg.getToCity( ) == "LAS" );
-    assert( shortleg.getName( ) == "Howard" );
+    assert( shortleg.getName( ) == "Alex" );
     assert( std::to_string( shortleg.getCost( ) ) == "49.000000" );
     assert( std::to_string( shortleg.getMileage( ) ) == "285.000000" );
 
     // account balance starts at zero...
     assert( std::to_string( account.getBalance( ) ) == "0.000000" );
-    assert( account.getName( ) == "Howard" );
+    assert( account.getName( ) == "Alex" );
     assert( account.canEarnFreeFlight( 3300.00 ) == false );
 
     // flights add to an account balance
@@ -38,8 +38,8 @@ int main() {
     if (account.canEarnFreeFlight( 285 ))
     {
         assert( account.freeFlight( "LAS", "LAX", 285, sample ) == true );
-        // Howard earned a free flight...
-        assert( sample.getName( ) == "Howard" );
+        // Alex earned a free flight...
+        assert( sample.getName( ) == "Alex" );
         assert( std::to_string( sample.getCost( ) ) == "0.000000" );
         assert( sample.getFromCity( ) == "LAS" );
         assert( sample.getToCity( ) == "LAX" );
